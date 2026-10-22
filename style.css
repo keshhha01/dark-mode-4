@@ -1,0 +1,142 @@
+/* Основные настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #fff5f7;
+    --card: #ffffff;
+    --text: #514653;
+    --muted: #938493;
+    --accent: #d99bb5;
+    --button-text: #ffffff;
+    --shadow: 0 15px 40px rgba(180, 130, 160, 0.15);
+}
+
+body.dark {
+    --background: #252332;
+    --card: #363347;
+    --text: #f5eefa;
+    --muted: #c1b4cd;
+    --accent: #b69ad8;
+    --button-text: #ffffff;
+    --shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Страница */
+body {
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+
+    transition: background 0.4s, color 0.4s;
+}
+
+/* Карточка */
+.card {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 28px;
+    text-align: center;
+
+    background: var(--card);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+
+    transition: background 0.4s, box-shadow 0.4s;
+}
+
+/* Значок */
+.icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+/* Маленький заголовок */
+.subtitle {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+/* Главный заголовок */
+h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+/* Описание */
+.description {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* Кнопка */
+button {
+    width: 100%;
+    padding: 15px 18px;
+    border: none;
+    border-radius: 14px;
+
+    background: var(--accent);
+    color: var(--button-text);
+
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:focus-visible {
+    outline: 3px solid var(--text);
+    outline-offset: 4px;
+}
+
+/* Статус темы */
+.status {
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Нижняя надпись */
+footer {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Для телефонов */
+@media (max-width: 480px) {
+    .card {
+        padding: 32px 22px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}
